@@ -1,0 +1,27 @@
+@import "./header/header_navbar/header_navbar.css";
+@import "./header/header.css";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);@font-face {
+    font-family: GI;
+    src: url(../fonts/gi-bold-web.woff) format('woff');
+    font-weight: 700;
+    font-style: normal
+};
+
+@font-face {
+    font-family: GI;
+    src: url(../fonts/gi-regular-web.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    -webkit-transition: opacity .8s;
+    transition: opacity .8s;
+    opacity: 1
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: GI,sans-serif;
+}
