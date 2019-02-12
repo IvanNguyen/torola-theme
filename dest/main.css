@@ -2,6 +2,7 @@
     display: block;
     height: 100%;
 }
+    /* align-self: stretch; */
     .navigation ul {
         list-style: none;
         margin-bottom: 0;
@@ -14,7 +15,15 @@
             height: 100%;
         }
     .navigation ul li a {
-                /* display: block; */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
                 position: relative;
                 height: 100%;
                 padding: 16px 19.2px;
@@ -23,7 +32,7 @@
                 font-size: 19.2px;
                 font-size: 1.2rem;
                 text-transform: uppercase;
-                letter-spacing:.1em;
+                letter-spacing: .1em;
                 -webkit-backface-visibility: hidden;
                         backface-visibility: hidden;
             }

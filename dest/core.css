@@ -8,3 +8,10 @@
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
 }
+html {
+    font-size: 62.5%;
+}
+a {
+    outline: 0;
+    text-decoration: none;
+}
