@@ -1,0 +1,26 @@
+.navigation {
+    display: block;
+    height: 100%;
+    ul {
+        list-style: none;
+        margin-bottom: 0;
+        height: 100%;
+        li {
+            display: inline-block;
+            position: relative;
+            float: left;
+            height: 100%;
+            a {
+                display: block;
+                position: relative;
+                height: 100%;
+                padding: 1rem 1.2rem;
+                color: white;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing:.1em;
+                backface-visibility: hidden;
+            }
+        }
+    }
+}
