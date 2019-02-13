@@ -2,17 +2,30 @@
     display: block;
     height: 100%;
     /* align-self: stretch; */
-    ul {
+    >ul {
         list-style: none;
         margin-bottom: 0;
         height: 100%;
-        li {
+        >li {
             display: inline-block;
             position: relative;
             float: left;
             height: 100%;
+            &.has-mega-menu {
+                position: inherit;
+            }
+            &:hover>a:after, &>a.active:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+            &:hover>.mega-menu,&:hover>ul {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
             a {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 position: relative;
@@ -23,6 +36,95 @@
                 text-transform: uppercase;
                 letter-spacing: .1em;
                 backface-visibility: hidden;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            >a:after {
+                content: '';
+                display: block;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background-color: currentColor;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform .3s ease;
+                backface-visibility: hidden;
+            }
+            div.mega-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: auto;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                margin-right: -15px;
+                margin-left: -15px;
+                border-top: 1px solid rgba(255, 255, 255, .1);
+                border-bottom: 5px solid white;
+                padding: 30px 50px 30px;
+                background-color: #111;
+                box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .22);
+                transition: all .3s ease;
+                h6.col-title {
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    margin-bottom: 2rem;
+                }       
+            }
+            >ul {
+                position: absolute;
+                width: 200px;
+                left: 0;
+                background-color: #111;
+                border-top: 1px solid rgba(255,255,255,.1);
+                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+                transition: all .3s ease;
+            }
+            ul {
+                li {
+                    &:first-child {
+                        border-top: 1px solid rgba(255,255,255,.1);
+                    }
+                    display: block;
+                    border-bottom: 1px solid rgba(255,255,255,.1);
+                    backface-visibility: hidden;
+                    a {
+                        display: block;
+                        color: rgba(255,255,255,.7);
+                        padding: .8rem 1.8rem;
+                        transition: all .3s ease;
+                        &:hover {
+                            color: rgba(255,255,255,1);
+                            background-color: #000;
+                            text-indent: 5px;
+                        }
+                        &.new:after {
+                            content: 'NEW';
+                            display: inline-block;
+                            background-color: red;
+                            color: white;
+                            border-radius: 3px;
+                            margin-left: 12px;
+                            font-size: 11px;
+                            font-weight: 700;
+                            padding: 1px 4px;
+                            letter-spacing: 0;
+                            text-indent: 0;
+                        }
+                    }
+                }
+            }
+            &:last-child>ul, &:nth-last-child(2)>ul {
+                left: auto;
+                right: 0;
             }
         }
     }
