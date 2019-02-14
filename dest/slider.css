@@ -1,0 +1,14 @@
+#mySlider {
+    
+}
+/* .hero {
+    height: 100%;
+} */
+.hero-fullscreen {
+    height: calc(100vh - 65px);
+}
+.carousel-inner img {
+    display: inline-block;
+    width: 100%;
+    height: calc(100vh - 65px);
+}

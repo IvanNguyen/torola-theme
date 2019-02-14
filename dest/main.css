@@ -165,7 +165,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
     top: 0;
     left: 0;
     /* box-sizing
@@ -178,6 +179,20 @@
     line-height */
     background-color: black;
     z-index: 1001;
+}
+#mySlider {
+    
+}
+/* .hero {
+    height: 100%;
+} */
+.hero-fullscreen {
+    height: calc(100vh - 65px);
+}
+.carousel-inner img {
+    display: inline-block;
+    width: 100%;
+    height: calc(100vh - 65px);
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);@font-face {
@@ -203,4 +218,13 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: GI,sans-serif!important;
+}
+#main {
+    min-height: 100vh;
+}
+.bg-lines:not([data-background]) {
+    background-color: #f3f6f7;
+    background-size: 57px auto;
+    background-position: center center;
+    background-image: linear-gradient(to right,transparent 29px,rgba(0, 0, 0, .08) 29px,transparent 30px);
 }

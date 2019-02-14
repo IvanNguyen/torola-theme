@@ -1,5 +1,6 @@
 @import "./header/header_navbar/header_navigation.css";
 @import "./header/header.css";
+@import "./slider.css";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);@font-face {
     font-family: GI;
@@ -24,4 +25,13 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: GI,sans-serif!important;
+}
+#main {
+    min-height: 100vh;
+}
+.bg-lines:not([data-background]) {
+    background-color: #f3f6f7;
+    background-size: 57px auto;
+    background-position: center center;
+    background-image: linear-gradient(to right,transparent 29px,rgba(0,0,0,.08) 29px,transparent 30px);
 }
