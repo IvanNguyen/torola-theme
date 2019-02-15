@@ -1,0 +1,1 @@
+#portfolio .parallax-folio-item:not(:last-child){margin-bottom:150px}#portfolio .parallax-folio-item{position:relative;overflow:hidden;background-color:bisque;width:100%}#portfolio .parallax-folio-item .item-media{position:relative;background-color:red;width:70%}[data-background],[data-poster]{background-size:cover;background-position:50%;background-repeat:no-repeat}

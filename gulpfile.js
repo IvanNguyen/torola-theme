@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create(); // auto load the page when t
 var precss = require ('precss');
 var advancedVariables = require('postcss-advanced-variables');
 var cssnext = require('postcss-cssnext');
-// var cssnano = require('cssnano');
+var cssnano = require('cssnano');
 var extendRule = require('postcss-extend-rule');
 var nestedProps = require('postcss-nested-props');
 // var filterGradient = require('postcss-filter-gradient');
@@ -33,7 +33,7 @@ gulp.task('css', function(){
         // awesome(),
         precss(),
         advancedVariables(),
-        // cssnano(),
+        cssnano(),
         cssnext(),
         extendRule(),
         nestedProps()

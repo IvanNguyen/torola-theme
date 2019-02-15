@@ -1,0 +1,28 @@
+#about {
+    padding-top: 17rem !important;
+    padding-bottom: 17rem !important;
+    /* &.small {
+        font-size: 1.19rem;
+        color: #909090;
+    } */
+    /* &.bold {
+        font-weight: 700!important;
+    } */
+    &.uppercase {
+        text-transform: uppercase;
+    }
+    &.serif {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h2 {
+        font-size: 5.1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+.small {
+    font-size: 1.19rem!important;
+    color: #909090;
+}
+.bold {
+    font-weight: 700!important;
+}

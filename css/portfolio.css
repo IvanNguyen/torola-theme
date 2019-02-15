@@ -1,0 +1,21 @@
+#portfolio {
+    .parallax-folio-item:not(:last-child) {
+        margin-bottom: 150px;
+    }
+    .parallax-folio-item {
+        position: relative;
+        overflow: hidden;
+        background-color: bisque;
+        width: 100%;
+        .item-media {
+            position: relative;
+            background-color: red;
+            width: 70%;
+        }
+    }
+}
+[data-background],[data-poster] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
