@@ -3,6 +3,8 @@
 @import "./slider.css";
 @import "./about.css";
 @import "./portfolio.css";
+@import "./cta.css";
+@import "./footer.css";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);@font-face {
     font-family: GI;
@@ -32,8 +34,39 @@ h1,h2,h3,h4,h5,h6 {
     min-height: 100vh;
 }
 .bg-lines:not([data-background]) {
-    background-color: #f3f6f7;
+    /* background-color: #f3f6f7; */
     background-size: 57px auto;
     background-position: center center;
     background-image: linear-gradient(to right,transparent 29px,rgba(0,0,0,.08) 29px,transparent 30px);
 }
+.uppercase {
+    text-transform: uppercase;
+}
+.slideanim {visibility:hidden;}
+.slide-effect {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }

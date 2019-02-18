@@ -1,16 +1,62 @@
 #portfolio {
     .parallax-folio-item:not(:last-child) {
-        margin-bottom: 150px;
+        margin-bottom: 170px;
     }
     .parallax-folio-item {
         position: relative;
         overflow: hidden;
-        background-color: bisque;
         width: 100%;
-        .item-media {
+        /* z-index: -1; */
+        .parallax-window {
             position: relative;
-            background-color: red;
+            background: transparent;
             width: 70%;
+            height: 450px;
+            /* z-index: 0; */
+        }
+        .tall {
+            position: relative;
+            width: 50%;
+            height: 740px;
+        }
+        .right {
+            left: 40%;
+        }
+        .left {
+            left: 10%;
+        }
+        figcaption {
+            width: 40%;
+            position: absolute;
+            top: 15%;
+            left: 60%;
+            box-shadow: 0 10px 50px rgba(0,0,0,.1);
+            .text-links {
+                font-size: 20px;
+                font-style: italic;
+                a {
+                    color: #757575;
+                    position: relative;
+                    text-decoration: none;
+                }      
+            }
+            h3 {
+                font-size: 4rem;
+            }
+        }
+        .left-caption {
+            left: 10%;
+        }
+        .right-caption {
+            left: 50%;
+        }
+        .item-caption-inner {
+            position: relative;
+            padding: 30px 40px 20px;
+            transition: all 1s ease;
+            transition-delay: .3s;
+            background-color: white;
+            
         }
     }
 }
@@ -19,3 +65,30 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.btn.border-2 {
+    border-width: 4px;
+    line-height: 37px;
+}
+.btn.style-3 {
+    text-transform: uppercase;
+    padding: 0 10% 0 10%;
+    background-color: transparent;
+    border-color: #dedede;
+    color: black;
+    font-size: 13px!important;
+    font-weight: 600
+}
+/* .parallax-folio-item:nth-child(even).tall .parallax-window {
+    left: 40%;
+}
+.parallax-folio-item:nth-child(even) .parallax-window {
+    left: 30%;
+}
+.parallax-folio-item.tall .parallax-window {
+    width: 50%;
+    left: 10%;
+}
+.parallax-folio-item .parallax-window {
+    position: relative;
+    width: 70%;
+} */
